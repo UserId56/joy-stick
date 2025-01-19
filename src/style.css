@@ -1,3 +1,53 @@
-body{
+body {
   background-color: black;
+  height: 720px;
+  border: 3px solid white;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.test {
+  color: #fff;
+  font-size: 24px;
+}
+
+.joy-stick {
+  position: absolute;
+  left: 10%;
+  bottom: 5%;
+}
+
+@media (orientation: landscape) {
+  body {
+    background-color: #fff;
+  }
+
+  .joy-stick {
+    left: auto;
+    right: 5%;
+  }
+}
+
+.joy-stick__container {
+
+  position: relative;
+}
+
+.joy-stick__btn {
+  display: none;
+  width: calc(var(--joy-stick-width, 150px) * 0.4);
+  height: calc(var(--joy-stick-width, 150px) * 0.4);
+  background-color: var(--joy-stick-color, #3333339f);
+  position: absolute;
+  left: var(--joy-stick-position-x, 50%);
+  top: var(--joy-stick-position-y, 50%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.test-user {
+  width: 200px;
+  height: 200px;
 }
